@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.home{
+  background-color: #ccc;
+  margin: 15px !important;
+  padding: 20px;
+}
+.card-img-top{
+  size: 300px !important;
+}
+
+.not-found{
+  width: 128px;
+  height: 192px;
+}
