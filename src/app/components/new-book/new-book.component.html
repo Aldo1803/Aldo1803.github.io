@@ -1,0 +1,11 @@
+<div class="container-fluid" >
+<h1>Input your ISBN</h1>
+<div class="mb-3">
+  <form #f='ngForm' (ngSubmit)="onSubmit(f)">
+  <label for="exampleFormControlInput1" class="form-label">ISBN</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ISBN" name='isbn' ngModel [(ngModel)]="isbn" >
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+</div>
+</div>

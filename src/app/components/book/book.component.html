@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+  <div class="card text-center">
+    <div class="card-header">
+      <div class="progress" *ngIf="book != null">
+        <div class="progress-bar" role="progressbar" style="width: {{book.percentage | number: '1.0-0'}}%;"
+          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{book.percentage | number: '1.0-0'}}%</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" *ngIf="book != null">{{book.title}}</h5>
+      <p class="card-text" *ngIf="book != null">{{book.sinopsis}}</p>
+
+      <form class="row g-3 d-flex justify-content-center" #f='ngForm' (ngSubmit)="onSubmit(f)">
+        <div class="col-auto">
+          <label for="staticEmail2" class="sr-only">Email</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Where did you stay?">
+        </div>
+        <div class="col-auto">
+          <label for="inputPassword2" class="sr-only">Page number</label>
+          <input type="text" class="form-control"  placeholder="Page number" name="pages" ngModel [(ngModel)]="pages" >
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Add pages</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-danger mb-3" (click)="deleteBook()">Delete book</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="card-footer text-muted">
+      Keep reading!!!
+    </div>
+  </div>
+</div>
